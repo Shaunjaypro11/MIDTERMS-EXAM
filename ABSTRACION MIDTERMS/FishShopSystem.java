@@ -7,7 +7,7 @@ interface FishShop {
     void returnFish(String name);
     void checkAllFish();
     void showBoughtFish();
-    void checkout(); // new method
+    void checkout(); 
 }
 
 class MyFishShop implements FishShop {
@@ -109,7 +109,7 @@ class MyFishShop implements FishShop {
         }
     }
 
-    // New checkout method
+  
     public void checkout() {
         if (boughtCount == 0) {
             System.out.println("No fish bought yet.");
@@ -124,7 +124,7 @@ class MyFishShop implements FishShop {
         }
         System.out.println("Total price: $" + total);
 
-        // Clear bought list after checkout
+       
         boughtCount = 0;
         System.out.println("Thank you for your purchase!");
     }
@@ -143,12 +143,12 @@ public class FishShopSystem {
             System.out.println("4. Return Fish");
             System.out.println("5. Check All Fish Available");
             System.out.println("6. Show Bought Fish");
-            System.out.println("7. Checkout"); // new menu
+            System.out.println("7. Checkout"); 
             System.out.println("8. EXIT");
 
             System.out.print("Choose an option: ");
             int choice = scan.nextInt();
-            scan.nextLine(); // consume newline
+            scan.nextLine();
 
             switch (choice) {
                 case 1:
@@ -191,3 +191,4 @@ public class FishShopSystem {
         }
     }
 }
+
